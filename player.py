@@ -3,17 +3,20 @@ from random import randint
 
 class Player:
     def __init__(self) -> None:
-        self.pick_a_weapon()
+        self.chosen_gesture = ""
+        self.gestures = ["Rock", "Paper", "Scissors", "Lizzard", "Spock"]
+        self.wins = 0
+        # self.pick_a_weapon()
 
     def pick_a_weapon(self):
-        weapon_choice = randint(0,4)
-        if weapon_choice == 0:
+        self.chosen_gesture = randint(0,4)
+        if self.chosen_gesture == 0:
             print('player picked Rock')
-        elif weapon_choice == 1:
+        elif self.chosen_gesture == 1:
             print('player picked Paper')
-        elif weapon_choice == 2:
+        elif self.chosen_gesture == 2:
             print('player picked Scissors')
-        elif weapon_choice == 3:
+        elif self.chosen_gesture == 3:
             print('player picked Lizzard')
-        elif weapon_choice == 4:
+        elif self.chosen_gesture == 4:
             print('player picked Spock')
