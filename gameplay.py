@@ -39,6 +39,15 @@ class Gameplay:
         if players == "1":
             self.player_one = Human()
             self.player_two = Ai()
+            print('man vs computer, a tale as old as 1943')
+        if players == '2':
+            self.player_one = Human()
+            self.player_two = Human()
+            print('man vs man huh? going old school this time I see')
+        if players == "3":
+            self.player_one = Ai()
+            self.player_two = Ai()
+            print('computer vs. computer..... BATTLE BOTS!!')
 
     def gameplay(self):
         while self.player_one.wins <= 2 and self.player_two.wins <= 2:
