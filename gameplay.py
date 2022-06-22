@@ -11,6 +11,8 @@ class Gameplay:
     def war_of_the_hands(self):
         self.welcome_and_rules()
         self.player_setup()
+        self.gameplay()
+        self.winner()
 
 
     def welcome_and_rules(self):
@@ -32,7 +34,7 @@ class Gameplay:
         print("Spock vaporizes Rock")
         print("")
         print("")
-        print("to ensure this war doesnt wage on for eternity a winner will be declaired after three superior weapon picks")
+        print("to ensure this war doesnt wage on for eternity a winner will be declaired after two superior weapon picks")
 
     def player_setup(self):
         players = input('First lets see who will wage this war!\n1-man vs. computer\n2-man vs.man\n3-computer vs computer\nplease select 1, 2, or 3: ')
@@ -51,6 +53,8 @@ class Gameplay:
 
     def gameplay(self):
         while self.player_one.wins <= 2 and self.player_two.wins <= 2:
+            self.player_one.pick_a_weapon()
+            self.player_two.pick_a_weapon()
             if self.player_one.chosen_gesture == 'Rock':
                 if self.player_two.chosen_gesture == 'Rock':
                     print('When the hands match no battle is won or lost, a stalemate occurs no points awarded')
@@ -126,3 +130,13 @@ class Gameplay:
                 elif self.player_two.chosen_gesture == 'Lizzard':
                     self.player_two.wins += 1
                     print(f'{self.player_one.name} is Poisoned by {self.player_two.name}')
+
+
+
+
+
+    def winner(self):
+        if self.player_one.wins ==2:
+            print(f'congrats {self.player_one} you are the tactical winner!')
+        if self.player_two.wins ==2:
+            print(f'congrats {self.player_two} you are the tactical winner!')
