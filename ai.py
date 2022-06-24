@@ -2,13 +2,7 @@ import random
 from player import Player
 
 class Ai(Player):
-    def __init__(self):
+    def __init__(self, name):
         super().__init__()
-        self.name =''
-        self.set_name()
-
-
-    def set_name(self):
-        pick_name = 
-        self.name = pick_name
+        self.name =name
         

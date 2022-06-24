@@ -1,3 +1,4 @@
+from time import sleep, time
 from human import Human
 from ai import Ai
 
@@ -22,16 +23,27 @@ class Gameplay:
         print("")
         print("")
         print("")
+        sleep(1)
         print("Rock crushes Scissors")
+        sleep(1)
         print("Scissors cuts Paper")
+        sleep(1)
         print("Paper covers Rock")
+        sleep(1)
         print("Rock crushes Lizard")
+        sleep(1)
         print("Lizard Poisons Spock")
+        sleep(1)
         print("Spock smashes Scissors")
+        sleep(1)
         print("Scissors decapitates Lizard")
+        sleep(1)
         print("Lizard eats Paper")
+        sleep(1)
         print("Paper disproves Spock")
+        sleep(1)
         print("Spock vaporizes Rock")
+        sleep(1)
         print("")
         print("")
         print("to ensure this war doesnt wage on for eternity a winner will be declaired after two superior weapon picks")
@@ -42,22 +54,33 @@ class Gameplay:
             players = input('First lets see who will wage this war!\n1-man vs. computer\n2-man vs.man\n3-computer vs computer\nplease select 1, 2, or 3: ')
             if players == "1":
                 self.player_one = Human()
-                self.player_two = Ai()
+                self.player_two = Ai('Ultron')
+                sleep(1)
+                print("")
                 print('man vs computer, a tale as old as 1943')
-                player_picked == True
-            if players == '2':
+                print("")
+                player_picked = True
+            elif players == '2':
                 self.player_one = Human()
                 self.player_two = Human()
+                sleep(1)
+                print("")
                 print('man vs man huh? going old school this time I see')
-                player_picked == True
-            if players == "3":
-                self.player_one = Ai()
-                self.player_two = Ai()
+                print("")
+                player_picked = True
+            elif players == "3":
+                self.player_one = Ai('Ultron')
+                self.player_two = Ai('Skynet')
+                sleep(1)
+                print("")
                 print('computer vs. computer..... BATTLE BOTS!!')
-                player_picked == True
+                print("")
+                player_picked = True
             else:
+                print("")
                 print('please select either 1, 2, or 3')
-                player_picked == False
+                print("")
+                player_picked = False
 
 
     def gameplay(self):
